@@ -1,0 +1,93 @@
+.recommendlist {
+  padding-top: 20px;
+
+  ul {
+    padding-bottom: 10px;
+
+    li {
+      img {
+        width: 280px;
+        height: 50px;
+      }
+    }
+  }
+
+  .download {
+    position: relative;
+    display: flex;
+    padding: 10px 22px;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px;
+
+    &:hover {
+      cursor: pointer;
+      .qrcode {
+        display: block;
+      }
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+
+    span {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 10px;
+
+      p {
+        padding-bottom: 10px;
+        font-size: 15px;
+      }
+
+      small {
+        color: rgb(150, 150, 150);
+        font-size: 13px;
+      }
+    }
+
+    .qrcode {
+      position: absolute;
+      bottom: 94px;
+      left: 52px;
+      display: none;
+      box-sizing: border-box;
+      padding: 15px;
+      width: 170px;
+      border: 1px solid #999;
+      border-radius: 5px;
+      background: #fff;
+
+      &::after {
+        position: absolute;
+        bottom: -9px;
+        left: 77px;
+        z-index: 0;
+        width: 0.07813rem;
+        height: 0.07813rem;
+        border: 1px solid #999;
+        background: #fff;
+        content: "";
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        position: absolute;
+        bottom: 0px;
+        left: 72px;
+        z-index: 1;
+        width: 26px;
+        height: 14px;
+        background: #fff;
+        content: "";
+      }
+
+      img {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  }
+}

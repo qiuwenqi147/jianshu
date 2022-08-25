@@ -1,0 +1,81 @@
+.popup {
+  position: absolute;
+  top: 48px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 6px;
+  width: 250px;
+  height: 170px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(71, 71, 71, 0.2);
+
+  ul {
+    overflow: auto;
+
+    &::-webkit-scrollbar { width: 0 !important }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 16px;
+      border-radius: 5px;
+      background: #fff;
+      line-height: 36px;
+
+      span{
+        width: 165px;
+        font-size: 14px;
+      };
+
+      .iconfont {
+        color: #999;
+        font-size: 18px;
+      }
+
+      .delete {
+        font-size: 14px;
+        transform: rotate(45deg);
+
+        &:hover{
+          color: #333;
+        }
+      }
+
+      &:hover {
+        background: #f0f0f0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: -8px;
+    left: 28px;
+    z-index: -1;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(71, 71, 71, 0.2);
+    content: "";
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    position: absolute;
+    top: -22px;
+    left: 25px;
+    width: 0;
+    height: 0;
+    border: 11px solid transparent;
+    border-bottom-color: #fff;
+    content: "";
+  }
+
+  .iconfont {
+    font-size: 16px;
+  }
+}

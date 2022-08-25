@@ -3,17 +3,19 @@
  * @Date: 2022-08-22 16:04:01
  * @Description:
  */
-import { lazy } from "react";
-const Header = lazy(() =>
-  import(/* webpackChunkName: "Header" */ "../../components/Header")
-);
+import Style from "./style.module.scss"
+import useLogic from "./logic";
+import Header from "../../components/Header";
+import Totop from "../../components/Totop";
 
 function Detail() {
+  useLogic();
   return (
-    <>
+    <div className={Style.detail}>
       <Header />
-      <div>详情</div>
-    </>
+      详情
+      <Totop />
+    </div>
   );
 }
 

@@ -6,6 +6,6 @@
 (function () {
   document.addEventListener("DOMContentLoaded", function (e) {
     let width = document.documentElement.clientWidth;
-    document.getElementsByTagName("html")[0].style.fontSize = width / 23.4375 + "px";
+    document.getElementsByTagName("html")[0].style.fontSize = width / 10 + "px";
   }, false);
 }());

@@ -1,0 +1,24 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 56px;
+  width: 960px;
+
+  .left {
+    box-sizing: border-box;
+    padding: 30px 0 0 15px;
+    width: 640px;
+
+    a {
+      img {
+        width: 625px;
+        height: 270px;
+        border-radius: 6px;
+      }
+    }
+  }
+  .right {
+    width: 280px;
+  }
+}
