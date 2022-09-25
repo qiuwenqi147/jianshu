@@ -97,6 +97,7 @@ export const logout = (state, action) => {
   state.tagsMouseIn = false;
   state.userInfoMouseIn = false;
   state.userInfo = {};
+  localStorage.removeItem("userInfo")
 };
 
 
@@ -108,6 +109,11 @@ export const handleLogin = (navigate) => {
   return async (dispatch) => {
     const { data } = await login()
     dispatch(globalActions.setUserInfo(data));
+    const userInfo = {
+      timer: Date.now() + 60 * 1000,
+      data
+    }
+    localStorage.setItem("userInfo", JSON.stringify(userInfo))
     navigate('/')
   };
 };
