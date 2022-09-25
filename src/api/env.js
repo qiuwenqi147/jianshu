@@ -15,8 +15,8 @@
 const dev = {
   routerMode: "history", // hash history
 
-  // baseURL: "http://192.168.1.62:3000" // 测试服务器
-  baseURL: "http://192.168.1.4:3000" // 测试服务器
+  baseURL: "http://192.168.1.62:3000" // 测试服务器
+  // baseURL: "http://192.168.1.4:3000" // 测试服务器
   // baseURL: "http://192.168.2.139:3000" // 测试服务器
 };
 const prod = {

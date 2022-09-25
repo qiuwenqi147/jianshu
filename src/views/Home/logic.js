@@ -12,6 +12,7 @@ const useLogic = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state.homeStore);
 
+  console.log("------Home")
   useEffect(() => {
     // 初始化页面数据
     dispatch(init())

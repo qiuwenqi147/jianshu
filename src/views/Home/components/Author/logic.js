@@ -14,11 +14,12 @@ const useLogic = () => {
   const changeRef = useRef()
   const [pageNum, setPageNum] = useState(1);
 
+  console.log("------Author")
+
   useEffect(() => {
     if(pageNum === 1) return
     console.log("页面增加调取接口", pageNum)
   }, [pageNum])
-
   // 点击换一批 
   const handleChange = () => {
     // 图标旋转180度
