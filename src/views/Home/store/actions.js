@@ -5,6 +5,7 @@
  */
 import { getHomeData } from "../../../api";
 import { homeActions } from "./index";
+import { globalActions } from "../../../store/global";
 
 // 分页 
 const paging = (newArr, arr, num) => {
@@ -38,8 +39,15 @@ export const changeAuthor = (state, action) => {
 // 接口获取首页数据
 export const init = () => {
   return async (dispatch, getState) => {
-    getHomeData().then((res) => {
-      dispatch(homeActions.initHomeData(res.data));
-    });
+    const { data } = await getHomeData();
+    dispatch(homeActions.initHomeData(data));
+
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    if(userInfo && userInfo.timer > Date.now()) {
+      dispatch(globalActions.setUserInfo(userInfo.data));
+    } else {
+      localStorage.removeItem("userInfo")
+    }
   };
 };
+
